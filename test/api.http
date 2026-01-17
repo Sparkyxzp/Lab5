@@ -123,6 +123,22 @@ Content-Type: application/json
   "AttendanceID": 12345678,
   "Date": "17-01-2026",
   "status": "Online",
-  "CheckInTime": "ให้ทาย",
+  "CheckInTime": "08:30",
   "CheckOutTime": "17:00"
 }
+
+###
+GET http://localhost:3000/api/attendance
+
+###
+PUT http://localhost:3000/api/attendance/1
+Content-Type: application/json
+
+{
+  "status": "Offline",
+  "CheckInTime": "09:00",
+  "CheckOutTime": "18:30"
+}
+
+###
+DELETE http://localhost:3000/api/attendance/1

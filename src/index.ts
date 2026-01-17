@@ -3,9 +3,10 @@ import { Hono } from 'hono'
 import  userRoutes  from './users/index.js'
 import  roleRoutes  from './roles/index.js' 
 import  productRoutes  from './products/index.js'
+import AttendanceRoutes from './Attendance/index.js'
 
 import db from './db/index.js'
-import AttendanceRoutes from './Attendance/index.js'
+
 
 const app = new Hono()
 
