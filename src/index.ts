@@ -5,12 +5,18 @@ import  roleRoutes  from './roles/index.js'
 import  productRoutes  from './products/index.js'
 
 import db from './db/index.js'
+import AttendanceRoutes from './Attendance/index.js'
 
 const app = new Hono()
 
 app.route('/api/users',userRoutes)
 app.route('/api/roles',roleRoutes)
 app.route('/api/products',productRoutes)
+app.route ('/api/attendance',AttendanceRoutes)
+
+app.get('/', (c) => {
+  return c.json({ message: 'Welcome to the CRUD API' })
+})
 
 serve({
   fetch: app.fetch,

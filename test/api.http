@@ -23,6 +23,7 @@ Content-Type: application/json
   "name": "John Doe",
   "email": "john@doe"
 }
+
 ###
 
 POST http://localhost:3000/api/products
@@ -113,3 +114,15 @@ Content-Type: application/json
 ###
 
 DELETE http://localhost:3000/api/roles/7
+
+###
+POST http://localhost:3000/api/attendance
+Content-Type: application/json
+
+{
+  "AttendanceID": 12345678,
+  "Date": "17-01-2026",
+  "status": "Online",
+  "CheckInTime": "ให้ทาย",
+  "CheckOutTime": "17:00"
+}
